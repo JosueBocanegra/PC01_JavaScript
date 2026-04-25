@@ -66,7 +66,7 @@ let productos = [
     { nombre: "Terno formal", precio: 60, imagen: "img/ternoHombre.jpg", categoria: "hombre" },
     { nombre: "Camisa Perú", precio: 100, imagen: "img/camisaPeru.jpg", categoria: "hombre" },
 
-    { nombre: "Pantalón negro", precio: 40, imagen: "img/pantalonFormalMujer.jpg", categoria: "mujer" },
+    { nombre: "Pantalón negro", precio: 40, imagen: "img/pantalonFormalMujer.jpeg", categoria: "mujer" },
     { nombre: "Pantalón celeste", precio: 100, imagen: "img/pantalonMujer.jpg", categoria: "mujer" },
     { nombre: "Blusa negra", precio: 50, imagen: "img/blusaMujer.jpg", categoria: "mujer" },
     { nombre: "Pantalón rosado", precio: 70, imagen: "img/pantalonEstrellasMujer.jpg", categoria: "mujer" }
