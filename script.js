@@ -7,10 +7,16 @@ function registrarUsuario() {
 
     let regexCorreo = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     let regexPassword = /^(?=.*[A-Z])(?=.*\d).{8,}$/;
+    let regexNombre = /^[A-Za-zÁÉÍÓÚáéíóúÑñ\s]+$/;
 
 
     if (nombre.trim() === "" || correo.trim() === "" || password.trim() === "") {
         alert("Todos los campos son obligatorios");
+        return;
+    }
+
+    if (!regexNombre.test(nombre)) {
+        alert("El nombre solo debe contener letras y espacios");
         return;
     }
 
@@ -20,7 +26,7 @@ function registrarUsuario() {
     }
 
     if (!regexPassword.test(password)) {
-        alert("Contraseña inválida");
+        alert("La contraseña debe tener al menos 8 caracteres, una mayúscula y un número");
         return;
     }
 
@@ -80,7 +86,8 @@ function mostrarProductos(filtro = "todos") {
 
     let listaFiltrada = productos.filter(p => filtro === "todos" || p.categoria === filtro);
 
-    listaFiltrada.forEach((p, index) => {
+    listaFiltrada.forEach((p) => {
+        let indexReal = productos.indexOf(p);
         contenedor.innerHTML += `
             <div class="col-6 col-md-4 col-lg-3">
                 <div class="card mb-4 h-100">
@@ -88,7 +95,7 @@ function mostrarProductos(filtro = "todos") {
                     <div class="card-body text-center">
                         <h6>${p.nombre}</h6>
                         <p>S/ ${p.precio}</p>
-                        <button class="btn btn-primary btn-sm" onclick="agregarCarrito(${index})">Agregar</button>
+                        <button class="btn btn-primary btn-sm" onclick="agregarCarrito(${indexReal})">Agregar</button>
                     </div>
                 </div>
             </div>
