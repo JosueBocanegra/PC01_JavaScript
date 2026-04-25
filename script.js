@@ -63,7 +63,6 @@ function limpiarFormulario() {
 }
 
 
-//=====================================================================================================================
 let productos = [
     { nombre: "Casaca de cuero", precio: 50, imagen: "img/casacaCueroHombre.jpg", categoria: "hombre" },
     { nombre: "Casaca impermeable", precio: 35, imagen: "img/casacaImpermeableHombre.jpg", categoria: "hombre" },
